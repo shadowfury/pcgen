@@ -11,9 +11,13 @@ ISOGL:NO
 COPYRIGHT:Champions of Ruin - Wizards of the Coast (November 2005)
 STATUS:ALPHA
 INFOTEXT:Champions of Ruin add-ons
+# COVER should be cover_gameMode_pub_book.file
+COVER:../../../../_artwork/cover_35e_wotc_cr.jpg
+# LOGO should be logo_pub.file
+LOGO:../../../../_artwork/logo_wotc.png
 
 ABILITY:cr_abilities.lst
-ABILITYCATEGORY:cr_abilities.lst
+ABILITYCATEGORY:cr_abilitycategories.lst
 BIOSET:cr_biosettings.lst
 CLASS:cr_classes.lst
 EQUIPMENT:cr_equip.lst

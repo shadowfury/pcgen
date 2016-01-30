@@ -31,10 +31,12 @@ ABILITY:pg_abilities.lst
 ABILITYCATEGORY:pg_abilitycategories.lst
 BIOSET:pg_biosettings.lst
 CLASS:pg_classes.lst
+CLASS:pg_classes_epic.lst|PRECAMPAIGN:1,INCLUDES=Epic Level Handbook
 DEITY:pg_deities.lst
 DOMAIN:pg_domains.lst
 EQUIPMENT:pg_equip.lst
 ABILITY:pg_feats.lst
+ABILITY:pg_feats_epic.lst|PRECAMPAIGN:2,INCLUDES=Epic Level Handbook,INCLUDES=Magic of Faerun
 KIT:pg_kits.lst
 LANGUAGE:pg_languages.lst
 WEAPONPROF:pg_profs_weapon.lst
