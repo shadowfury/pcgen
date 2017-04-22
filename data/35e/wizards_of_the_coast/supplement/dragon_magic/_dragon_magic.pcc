@@ -6,6 +6,7 @@ STATUS:ALPHA
 TYPE:Wizards of the Coast.Supplement
 SETTING:Fantasy
 PRECAMPAIGN:1,INCLUDESBOOKTYPE=Core35e
+PRECAMPAIGN:2,INCLUDES=Complete Arcane,INCLUDES=Draconomicon
 SOURCELONG:Dragon Magic
 SOURCESHORT:DM
 SOURCEDATE:2006-09
@@ -25,7 +26,7 @@ INFOTEXT:Source material for Dragon Magic.
 ABILITY:dm_abilities.lst
 # Discussion about removing "feat". Using safe alternative.
 ABILITY:dm_abilities_feat.lst
-ABILITY:dm_abilitycategories.lst
+ABILITYCATEGORY:dm_abilitycategories.lst
 CLASS:dm_classes.lst
 #COMPANIONMOD:dm_companionmods.lst
 #DEITY:dm_deities.lst
@@ -38,7 +39,7 @@ KIT:dm_kits.lst
 #WEAPONPROF:dm_profs_weapon.lst
 RACE:dm_races.lst
 SPELL:dm_spells.lst
-#TEMPLATE:dm_templates.lst
+TEMPLATE:dm_templates.lst
 
 FORWARDREF:CLASSSPELLLIST|Wu Jen,Shugenja,Hexblade,Psion,Wilder,Psychic Warrior
 

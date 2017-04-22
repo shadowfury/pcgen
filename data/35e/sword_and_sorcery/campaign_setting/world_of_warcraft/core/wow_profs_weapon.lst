@@ -8,7 +8,7 @@ Spells (Ray)		TYPE:Auto
 Spells (Touch)		TYPE:Auto
 
 
-Dagger			TYPE:Simple.Light.Melee
+Dagger			TYPE:Simple.Light.Melee.Dagger
 Gauntlet (spiked)		TYPE:Simple.Light.Melee
 Mace (light)		TYPE:Simple.Light.Melee
 Sickle			TYPE:Simple.Light.Melee
@@ -22,6 +22,8 @@ Longspear				TYPE:Simple.TwoHanded.Melee
 Quarterstaff				TYPE:Simple.TwoHanded.Melee
 Spear				TYPE:Simple.TwoHanded.Melee
 
+
+
 # Ranged
 Crossbow (heavy)				TYPE:Simple.Ranged	HANDS:2
 Crossbow (light)				TYPE:Simple.Ranged	HANDS:2
@@ -30,13 +32,15 @@ Javelin					TYPE:Simple.Ranged	HANDS:1
 Sling						TYPE:Simple.Ranged	HANDS:1
 
 # Martial Weapons
-Axe (throwing)				TYPE:Martial.Melee.Light	
+Axe (throwing)				TYPE:Martial.Melee.Light
 Handaxe					TYPE:Martial.Melee.Light
 Kukri						TYPE:Martial.Melee.Light
 Pick (light)				TYPE:Martial.Melee.Light
 Sap						TYPE:Martial.Melee.Light
 Shield (light)				TYPE:Martial.Melee.Light
 Sword (short)				TYPE:Martial.Melee.Light
+
+Rapier			TYPE:Martial.OneHanded.Melee
 
 Battleaxe					TYPE:Martial.Melee.OneHanded
 Bayonet (miniature)			TYPE:Martial.Melee.OneHanded
@@ -62,9 +66,7 @@ Lance						TYPE:Martial.Melee.TwoHanded
 Scythe					TYPE:Martial.Melee.TwoHanded
 
 Longbow					TYPE:Martial.Ranged		HANDS:2
-Longbow (composite)			TYPE:Martial.Ranged		HANDS:2
 Shortbow					TYPE:Martial.Ranged		HANDS:2
-Shortbow (composite)			TYPE:Martial.Ranged		HANDS:2
 
 # Exotic Weapons
 Claws of attack (orc)			TYPE:Exotic.Melee.Light
@@ -84,7 +86,7 @@ Sword (Two-Bladed)		TYPE:Exotic.Melee.TwoHanded
 Totem (Tauren)			TYPE:Exotic.Melee.TwoHanded
 
 Blunderbuss				TYPE:Simple.Free.Auto		HANDS:2
-Bolas					
+Bolas
 Crossbow (Hand)			TYPE:Exotic.Ranged		HANDS:1
 Flintlock Pistol			TYPE:Firearms.Ranged		HANDS:1
 Long Rifle				TYPE:Firearms.Ranged		HANDS:1

@@ -4,13 +4,14 @@ SOURCELONG:Monster Compendium: Monsters of Faerun	SOURCESHORT:mon	SOURCEDATE:200
 ###Block: Prestige Classes
 
 # Class Name			Hit Dice	Type				Abbreviation	Max Level	Source Page		Combat bonus															Modify VAR													Bonus
-CLASS:Beholder Mage (MoF)	HD:4		TYPE:Monster.Prestige	ABB:BeHM		MAXLEVEL:10	SOURCEPAGE:p.	BONUS:COMBAT|BASEAB|classlevel("APPLIEDAS=NONEPIC")*1/2|TYPE=Base.REPLACE|PREVAREQ:UseAlternateBABProgression,0	BONUS:VAR|ClassBABPoor|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalBAB,1	BONUS:SAVE|BASE.Fortitude|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Reflex|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Will|classlevel("APPLIEDAS=NONEPIC")/2+2
+CLASS:Beholder Mage (MoF)	HD:4		TYPE:Monster.Prestige	FACT:Abb|BeHM		MAXLEVEL:10	SOURCEPAGE:p.	BONUS:COMBAT|BASEAB|classlevel("APPLIEDAS=NONEPIC")*1/2|TYPE=Base.REPLACE|PREVAREQ:UseAlternateBABProgression,0	BONUS:VAR|ClassBABPoor|classlevel("APPLIEDAS=NONEPIC")|PREVAREQ:UseFractionalBAB,1	BONUS:SAVE|BASE.Fortitude|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Reflex|classlevel("APPLIEDAS=NONEPIC")/3	BONUS:SAVE|BASE.Will|classlevel("APPLIEDAS=NONEPIC")/2+2
 # Class Name			Required Race				Required Text
 CLASS:Beholder Mage (MoF)	PRERACE:1,RACESUBTYPE:Beholder	PRETEXT:Lose or put out central magic eye.
 # Class Name			Skill Pts/Lvl	Class Skill
 CLASS:Beholder Mage (MoF)	STARTSKILLPTS:2	CSKILL:Craft (Alchemy)|Appraise|Concentration|Decipher Script|TYPE=Knowledge|Speak Language|Spellcraft|Use Magic Device
 # Class Name			Spell Stat		Spell Type		Spellbook		Caster level
-CLASS:Beholder Mage (MoF)	SPELLSTAT:INT	SPELLTYPE:Arcane	SPELLBOOK:YES	BONUS:CASTERLEVEL|Beholder Mage (MoF)|Caster_Level_Beholder_Mage	DEFINE:Caster_Level_Beholder_Mage|0	BONUS:VAR|Caster_Level_Beholder_Mage|CL+Caster_Level_Bonus	DEFINE:CasterLevelBLBeholder_Mage|0	BONUS:VAR|CasterLevelBLBeholder_Mage|charbonusto("PCLEVEL","Beholder Mage (MoF)")	BONUS:VAR|Caster_Level_Highest__Arcane|Caster_Level_Beholder_Mage+CasterLevelBLBeholder_Mage|TYPE=Base
+CLASS:Beholder Mage (MoF)	FACT:SpellType|Arcane
+CLASS:Beholder Mage (MoF)	SPELLSTAT:INT		SPELLBOOK:YES	BONUS:CASTERLEVEL|Beholder Mage (MoF)|Caster_Level_Beholder_Mage	DEFINE:Caster_Level_Beholder_Mage|0	BONUS:VAR|Caster_Level_Beholder_Mage|CL+Caster_Level_Bonus	DEFINE:CasterLevelBLBeholder_Mage|0	BONUS:VAR|CasterLevelBLBeholder_Mage|charbonusto("PCLEVEL","Beholder Mage (MoF)")	BONUS:VAR|Caster_Level_Highest__Arcane|Caster_Level_Beholder_Mage+CasterLevelBLBeholder_Mage|TYPE=Base
 1	CAST:6,3									ABILITY:Special Ability|AUTOMATIC|Sacrifice Eyestalk
 2	CAST:6,5,3
 3	CAST:6,6,5,3			BONUS:VAR|FamiliarLVL|CL	ABILITY:Special Ability|AUTOMATIC|Summon Familiar
@@ -142,18 +143,18 @@ CLASS:Deep Dragon	STARTSKILLPTS:6	MODTOSKILLS:YES			CSKILL:Listen|Search|Spot|Hi
 ###Block: Frightful Presence
 1	BONUS:VAR|FrightfulPresRange|DragonAge*30|PREVARGTEQ:DragonAge,5	ABILITY:Special Ability|AUTOMATIC|Frightful Presence
 ###Block: Normal Progression
-1									BONUS:VAR|ColdResistanceBonus|10	BONUS:VAR|FireResistanceBonus|10	DEFINE:DragonAge|1						ABILITY:Special Ability|AUTOMATIC|Immunity to Charm|Resistance to Cold|Resistance to Fire|True Seeing	SPELLS:Innate|TIMES=ATWILL|CASTERLEVEL=DragonCL|Detect Magic
-9									BONUS:VAR|SnakeFormTimes|3								DEFINE:DragonAge|2						ABILITY:Special Ability|AUTOMATIC|Alternate Form ~ Snake Form
-12									BONUS:VAR|HumanoidFormTimes|3								DEFINE:DragonAge|3						ABILITY:Special Ability|AUTOMATIC|Alternate Form ~ Humanoid Form
-15									BONUS:VAR|SnakeFormTimes|1	BONUS:VAR|HumanoidFormTimes|1			DEFINE:DragonAge|4	ADD:SPELLCASTER|Sorcerer
-18	SR:22	DR:5/Magic	BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|5
-21	SR:23			BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|6																							SPELLS:Innate|TIMES=ATWILL|CASTERLEVEL=DragonCL|Freedom of Movement
-24	SR:26	DR:10/Magic	BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|7
-27	SR:27			BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|8																							SPELLS:Innate|TIMES=3|CASTERLEVEL=DragonCL|Transmute Rock to Mud,15+CHA
-30	SR:30	DR:15/Magic	BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|9
-33	SR:31			BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|10																							SPELLS:Innate|TIMES=2|CASTERLEVEL=DragonCL|Passwall
-36	SR:34	DR:20/Magic	BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|11
-39	SR:35			BONUS:PCLEVEL|Sorcerer|1													DEFINE:DragonAge|12																							SPELLS:Innate|TIMES=2|CASTERLEVEL=DragonCL|Stone Shape
+1									BONUS:VAR|ColdResistanceBonus|10	BONUS:VAR|FireResistanceBonus|10	DEFINE:DragonAge|0	BONUS:VAR|DragonAge|1					ABILITY:Special Ability|AUTOMATIC|Immunity to Charm|Resistance To Cold|Resistance To Fire|True Seeing	SPELLS:Innate|TIMES=ATWILL|CASTERLEVEL=DragonCL|Detect Magic
+9									BONUS:VAR|SnakeFormTimes|3									BONUS:VAR|DragonAge|1				ABILITY:Special Ability|AUTOMATIC|Alternate Form ~ Snake Form
+12									BONUS:VAR|HumanoidFormTimes|3									BONUS:VAR|DragonAge|1				ABILITY:Special Ability|AUTOMATIC|Alternate Form ~ Humanoid Form
+15									BONUS:VAR|SnakeFormTimes|1	BONUS:VAR|HumanoidFormTimes|1				BONUS:VAR|DragonAge|1	ADD:SPELLCASTER|Sorcerer
+18	SR:22	DR:5/Magic	BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1
+21	SR:23			BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1																					SPELLS:Innate|TIMES=ATWILL|CASTERLEVEL=DragonCL|Freedom of Movement
+24	SR:26	DR:10/Magic	BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1
+27	SR:27			BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1																					SPELLS:Innate|TIMES=3|CASTERLEVEL=DragonCL|Transmute Rock to Mud,15+CHA
+30	SR:30	DR:15/Magic	BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1
+33	SR:31			BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1																						SPELLS:Innate|TIMES=2|CASTERLEVEL=DragonCL|Passwall
+36	SR:34	DR:20/Magic	BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1
+39	SR:35			BONUS:PCLEVEL|Sorcerer|1														BONUS:VAR|DragonAge|1																						SPELLS:Innate|TIMES=2|CASTERLEVEL=DragonCL|Stone Shape
 17				BONUS:PCLEVEL|Sorcerer|1
 20				BONUS:PCLEVEL|Sorcerer|1
 23				BONUS:PCLEVEL|Sorcerer|1

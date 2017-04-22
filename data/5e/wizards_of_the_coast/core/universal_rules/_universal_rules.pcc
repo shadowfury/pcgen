@@ -1,3 +1,4 @@
+# CVS $Revision$ $Author$ -- Mon Feb 22 22:56:28 2016 -- reformated by PCGen PrettyLST v6.06.00
 CAMPAIGN:Universal Rules
 KEY:Universal Rules (5e)
 TYPE:Core_Rule_Universal
@@ -6,10 +7,10 @@ TYPE:Core_Rule_Universal
 ABILITY:ur_abilities.lst
 CLASS:ur_classes.lst
 TEMPLATE:ur_templates.lst
+DATACONTROL:ur__datacontrols.lst
 
 
-
-INFOTEXT:Supports 6.4.1
+INFOTEXT:Supports 6.6.1
 # ENTRY DATE: 2015-01 (Unknown)
 # LST MONKEY: Bahamut
 # RELEASE REVIEW #

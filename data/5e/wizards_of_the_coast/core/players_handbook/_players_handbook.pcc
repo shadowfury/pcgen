@@ -2,7 +2,8 @@
 CAMPAIGN:Player's Handbook
 KEY:5e - Player's Handbook
 RANK:1
-BOOKTYPE:Core
+BOOKTYPE:Core Rules
+!PRECAMPAIGN:1,BOOKTYPE=Core Rules,[5e - Player's Handbook]
 GAMEMODE:5e
 STATUS:BETA
 TYPE:Wizards of the Coast.Core
@@ -22,6 +23,13 @@ LOGO:../../../../_artwork/logo_wotc.png
 INFOTEXT:D&D 5e Player's Handbook
 
 PCC:../universal_rules/_universal_rules.pcc
+
+ALIGNMENT:ph__align.lst
+DATACONTROL:ph__datacontrols.lst
+SAVE:ph__saves.lst
+STAT:ph__stats.lst
+
+
 
 ABILITY:ph_abilities.lst
 ABILITYCATEGORY:ph_abilitycategories.lst
@@ -49,8 +57,12 @@ SKILL:ph_skills.lst
 SPELL:ph_spells.lst
 TEMPLATE:ph_templates.lst
 
+COMPANIONLIST:Mount|ANY
+COMPANIONLIST:Follower|ANY
+
+
 ###Block: Revisions
-# BD - 0.01 Initial update 
+# BD - 0.01 Initial update
 
 INFOTEXT:Supports 6.4.1
 # ENTRY DATE: 2015-01 (Unknown)
